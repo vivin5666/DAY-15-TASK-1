@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+   
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+       font-family: 'poppins',sans-serif;
+        outline:none;
+    }
+    .container{
+        height: 100vh;
+        width:100%;
+        display:flex;
+        background-color:rgb(216, 169, 205);
+        justify-content: center;
+        align-items: center;
+    }
+     .Calculator{
+        background-color: rgb(241, 233, 233);
+        padding:20px;
+        border-radius:40px;
+         }
+ .Calculator form input{
+            border:10;
+            outline:0;
+            height:60px;
+            width: 70px;
+            border-radius:50px;
+            box-shadow: -8px -8px 15px rgb(255, 255, 255,0.1),
+                       5px 5px 15px rgb(0, 0, 0,0.2);
+             background-color: transparent;
+             font-size:30px;
+              color: #d6cbcb;
+               cursor:pointer;
+               text-align:center;
+               color: black;
+               margin:10px;
+ }
+
+ form .display{
+    display:flex;
+    color: #d6cbcb;
+    justify-content:flex-end;
+    margin:20px 0px;
+}
+form .display input{
+    color:black;
+    text-align: end;
+    flex:1;
+    font-size:45px;
+    box-shadow:none;
+   }
+form input.equal{ 
+    width: 150px;
+   
+} 
+</style>
+
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="Calculator">
+            <form>
+                <div class="display">
+           <input type="text" name="display">
+           </div>
+    <div> 
+        <input type="button" value="AC" style="background-color:rgb(87, 179, 87)" onclick="display.value ='' ">
+            <input type="button"  style="background-color:rgb(235, 104, 104)" value="DEL" onclick="display.value = display.value.toString().slice(0,-1)">
+            <input type="button" style="background-color:rgb(158, 158, 195)" value="%"onclick="display.value +='%'">
+            <input type="button" value="*" style="background-color:rgb(158, 158, 195)" onclick="display.value +='*'">
+        </div>
+            <div>
+            <input type="button"value="9" style="background-color:rgb(74, 70, 70)" onclick="display.value +='9'">
+            <input type="button"value="8" style="background-color:rgb(74, 70, 70)" onclick="display.value +='8'">
+            <input type="button"value="7" style="background-color:rgb(74, 70, 70)" onclick="display.value +='7'">
+            <input type="button"value="+" style="background-color:rgb(158, 158, 195)" onclick="display.value +='+'">
+        </div>
+           <div> <input type="button" value="6" style="background-color:rgb(74, 70, 70)"onclick="display.value +='6'">
+            <input type="button"value="5" style="background-color:rgb(74, 70, 70)" onclick="display.value +='5'">
+            <input type="button"value="4" style="background-color:rgb(74, 70, 70)" onclick="display.value +='4'">
+            <input type="button"value="-" style="background-color:rgb(158, 158, 195)" onclick="display.value +='-'">
+        </div>
+           <div> <input type="button"value="3" style="background-color:rgb(74, 70, 70)" onclick="display.value +='3'">
+            <input type="button"value="2" style="background-color:rgb(74, 70, 70)" onclick="display.value +='2'">
+            <input type="button"value="1"style="background-color:rgb(74, 70, 70)"  onclick="display.value +='1'">
+            <input type="button" value="." style="background-color:rgb(158, 158, 195)" onclick="display.value +='.'">
+        </div>
+            <div><input type="button"value="0"style="background-color:rgb(74, 70, 70)"  onclick="display.value +='0'">
+                <input type="button"value="/" style="background-color:rgb(158, 158, 195)" onclick="display.value +='/'">
+                 <input type="button" value="=" style="background-color:chocolate" onclick="display.value = eval(display.value)" class="equal">
+        </div>  
+    </form>
+ </div>
+</body>
+</html>
